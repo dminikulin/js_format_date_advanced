@@ -9,7 +9,7 @@
  */
 function formatDate(date, fromFormat, toFormat) {
   // write code here
-  const nums = date.split(fromFormat[3]);
+  const nums = date.split(fromFormat[fromFormat.length - 1]);
 
   const dateObj = {};
 
@@ -33,7 +33,7 @@ function formatDate(date, fromFormat, toFormat) {
     newDateTemplate.push(dateObj[toFormat[i]]);
   }
 
-  return newDateTemplate.join(toFormat[3]);
+  return newDateTemplate.join(toFormat[toFormat.length - 1]);
 }
 
 module.exports = formatDate;
